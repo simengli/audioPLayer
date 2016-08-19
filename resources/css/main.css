@@ -1,0 +1,321 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* audio player custmize style sheet
+   version: 0.1
+   author: Simeng
+*/
+
+
+/* audio player */
+.container {
+	max-width: 600px;
+	min-width:400px;
+	width: 100%;
+	height: auto;
+	margin: 40px auto;
+}
+
+.clear-fix {
+	clear: both;
+}
+
+h1.title {
+	font-size: 25px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+span.title {
+	font-weight: bold;
+}
+.audio-cover,
+.audio-info,
+.audio-controler {
+	margin-bottom: 20px;
+}
+
+.audio-info {
+	text-align: center;
+}
+
+.container button {
+	border: none;
+	cursor: pointer;
+}
+
+.container button:disabled {
+	cursor: default;
+}
+
+.container button:focus {
+	border: none;
+	outline: none;
+}
+
+/* Audio cover image*/
+.audio-cover {
+	width: 100%;
+	text-align: center;
+}
+
+.audio-cover img {
+	width: 300px;
+	height: 300px;
+}
+
+/* Volume and playlist order control */
+.volume-control {
+	text-align: center;
+	width:85%;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+.volume-control .volume-icon {
+	width: 30px;
+	height: 30px;
+	background: url(../img/speaker.png) no-repeat;
+	background-size: 30px 30px;
+	float: left;
+	cursor: pointer;
+}
+
+.volume-control .mute-icon {
+	width: 30px;
+	height: 30px;
+	background: url(../img/mute.png) no-repeat;
+	background-size: 30px 30px;
+	float: left;
+	cursor: pointer;
+}
+
+input.volume {
+    -webkit-appearance: none !important;
+    background: #ccc;
+    height: 1px;
+	margin-top: 15px;
+	float: left;
+}
+
+input.volume::-webkit-slider-runnable-track {
+    background: #777;
+    border-radius: 10px;
+}
+
+
+input.volume:focus {
+	outline: none;
+}
+
+input.volume::-webkit-slider-thumb {
+	-webkit-appearance: none !important;
+	background: url(../img/thumb.png) no-repeat;
+	background-size: 10px, 10px;
+	height: 10px;
+	width: 10px;
+}
+
+.volume-value {
+	margin-left: 10px;
+	float: left;
+	line-height: 30px;
+}
+
+button.playing-method {
+	opacity: 0.3;
+	width: 30px;
+	height: 30px;
+	float: right;
+}
+button.playing-method.active {
+	opacity: 1;
+}
+
+button#shuffle-play {
+	background: url(../img/shuffle.png) no-repeat;
+	background-size: 30px 30px;
+}
+
+button#single-repeat {
+	background: url(../img/repeat_once.png) no-repeat;
+	background-size: 30px 30px;
+}
+
+button#playlist-repeat {
+	background: url(../img/repeat.png) no-repeat;
+	background-size: 30px 30px;
+}
+
+/* Audio control */
+.control-buttons {
+	width:85%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+
+.flex-container {
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+
+.control-buttons button:disabled {
+	opacity: 0.3;
+}
+button#prev{
+	width: 70px;
+	height: 70px;
+	background: url(../img/previous.png) no-repeat;
+	background-size: 70px 70px;
+	float: left;
+}
+button#play{
+	width: 70px;
+	height: 70px;
+	background: url(../img/play.png) no-repeat;
+	background-size: 70px 70px;
+	float: left;
+}
+button#pause{
+	width: 70px;
+	height: 70px;
+	background: url(../img/pause.png) no-repeat;
+	background-size: 70px 70px;
+	float: left;
+}
+button#stop{
+	width: 70px;
+	height: 70px;
+	background: url(../img/stop.png) no-repeat;
+	background-size: 70px 70px;
+	float: left;
+}
+button#next{
+	width: 70px;
+	height: 70px;
+	background: url(../img/next.png) no-repeat;
+	background-size: 70px 70px;
+}
+
+/* tracker */
+.audio-tracker {
+	width: 85%;
+	margin: 5px auto;
+}
+
+.audio-tracker .progress-bar {
+	width:100%;
+	position: relative;
+	background: #eee;
+	cursor: pointer;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.audio-tracker .progress-pointer {
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	position: absolute;
+	right: 0;
+	background: #ccc;
+}
+.audio-tracker .progress-bar-played {
+	-webkit-transition: all .2s ease 0s;
+	transition: all .2s ease 0s;
+	height: 10px;
+	background: #F66;
+	position: relative;
+	border-radius: 10px
+}
+.audio-tracker .audio-time {
+	display: table;
+	width: 100%;
+}
+.audio-tracker .audio-time *{
+	width: 50%;
+	float: left;
+	display: block;
+}
+.audio-tracker .audio-time .current-time {
+	text-align: left;
+}
+.audio-tracker .audio-time .duration {
+	text-align: right;
+}
+
+/* Play list */
+
+.play-list ul {
+	border: #000 1px solid;
+	margin-top: 10px;
+	padding: 10px;
+}
+.play-list ul li {
+	padding-left: 10px;
+	padding-top:  5px;
+	padding-bottom: 5px;
+	cursor: pointer;
+}
+.play-list ul li:hover {
+	background-color: #ddd;
+}
+.play-list ul li.active {
+	color: red;
+}
+
+

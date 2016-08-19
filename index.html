@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Audio Player</title>
+		<link rel="stylesheet" href="resources/css/main.css" media="screen">
+		<script src="resources/js/jquery-3.1.0.min.js"></script>
+		<script src="resources/js/audioPlayer.js"></script>
+	</head>
+	<body>
+		<h1 class="title">Audio Player</h1>
+		<div class="container">
+			<div class="player">
+				<div class="audio-cover">
+					<img src="resources/img/noImage.jpeg">
+				</div>
+				<div class="audio-info">
+					<span class="title">Name:</span>
+					<span class="title trackName"></span>
+				</div>
+				<div class="audio-controler">
+					<div class="volume-control">
+						<span class="volume-icon"></span>
+						<span class="mute-icon" style="display: none;"></span>
+						<input class="volume" type="range" min="0" max="10" value="5" />
+						<span class="volume-value">50</span>
+
+						<button id="shuffle-play" class="playing-method" data-method="shuffle"></button>
+						<button id="single-repeat" class="playing-method" data-method="single-repeat"></button>
+						<button id="playlist-repeat" class="playing-method" data-method="list-repeat"></button>	
+						<div class="clear-fix"></div>
+					</div>
+					
+					<div class="control-buttons flex-container">
+						<button id="prev" disabled></button>
+						<button id="play" disabled></button>
+						<button id="pause" disabled style="display: none;"></button>
+						<button id="stop" disabled ></button>
+						<button id="next" disabled></button>
+					 </div>
+
+					 <div class="audio-tracker">
+						<div class="progress-bar">
+							<div class="progress-bar-played">
+								<span class="progress-pointer"></span>
+							</div>
+						</div>
+						<div class="audio-time">
+							<span class="current-time">00:00</span>
+							<span class="duration">00:00</span>
+						</div>
+					 </div>
+				</div>
+				
+				<div class="play-list">
+					<span class="title"> Play List :</span>
+					<ul>
+						<!-- TODO: need to replace the playlist using file reading method or json data -->
+						<li data-src="resources/audio/beautiful_day.mp3" data-title="Beautiful Day" data-author="U2">Beautiful Day</li>
+						<li data-src="resources/audio/an_ocean_apart.mp3" data-title="An ocean apart" data-author="Julie deply">An ocean apart</li>
+						<li data-src="resources/audio/Leave_Out_All_The_Rest.mp3" data-title="Leave Out All The Rest" data-author="Linkin Park">Leave Out All The Rest</li>
+						<li data-src="resources/audio/Rolling_in_the_Deep.mp3" data-title="Rolling in the Deep" data-author="Adele">Rolling in the Deep</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
